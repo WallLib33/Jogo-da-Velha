@@ -1,6 +1,9 @@
+//#region Variaveis&Constantes
 const cellElements = document.querySelectorAll("[data-cell]");
 const board = document.querySelector("[data-board]");
-const winningMessageTextElement = document.querySelector("[data-winning-message-text]");
+const winningMessageTextElement = document.querySelector(
+  "[data-winning-message-text]"
+);
 const winningMessage = document.querySelector("[data-winning-message]");
 const restartButton = document.querySelector("[data-restart-button]");
 
@@ -16,7 +19,9 @@ const winningComb = [
   [0, 4, 8],
   [2, 4, 6],
 ];
+//#endregion
 
+//#region functions
 const startGame = () => {
   isCircleTurn = true;
 
@@ -98,6 +103,7 @@ const handleclick = (e) => {
     swapTurns();
   }
 };
+//#endregion
 
 startGame();
 restartButton.addEventListener("click", startGame);
